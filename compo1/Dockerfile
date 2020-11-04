@@ -3,8 +3,9 @@ FROM node:buster
 RUN mkdir /src
 WORKDIR /src
 
-COPY ./app/app.js /src/app.js
+COPY ./app/index.js /src/index.js
 COPY ./app/package.json /src/package.json
+COPY ./app/package-lock.json /src/package-lock.json
 
 RUN npm install
 
